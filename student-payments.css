@@ -1,0 +1,97 @@
+body {
+    background-color: #f1f1f1;
+  }
+#payForm {
+    background-color: #ffffff;
+    margin: auto;
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+}
+/* Hide all steps by default: */
+.tab {
+    display: none;
+  }
+.tab.active {
+    display: inline;
+}
+  button {
+    background-color: #1AD18E;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  button:hover {
+    opacity: 0.8;
+  }
+  #prevBtn {
+    background-color: #bbbbbb;
+    
+  }
+  /* Make circles that indicate the steps of the form: */
+.prevNext {
+  padding: 10px;
+
+}
+.steps {
+  padding: 10px;
+  text-align: center;
+}
+
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;  
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+  }
+  .step.active {
+    opacity: 1;
+  }
+  
+    #payButton:hover {
+        background-color: #19C687;
+        border-color: #19C687;
+        box-shadow: 0 3px 4px #bbbbbb;
+    }
+
+    .formInner {
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px auto;
+    }
+    .form-control {
+        border: 3px solid #ffffff !important;
+        box-shadow: 0 2px 8px #dddddd !important;
+        font-family: 'Arial';
+        width: 100%;
+    }
+    .form-control:hover {
+        box-shadow: 0 2px 4px #dddddd;
+    }
+
+    .form-control:focus {
+        box-shadow: 0 2px 4px #dddddd !important;
+        border: 3px solid #1AD18E !important;
+    }
+    #ifrm1 {
+        border: 2px;
+        width: 1100px;
+        height: 75px;
+        word-wrap: break-all;
+        overflow: visible;
+        margin: auto;
+        text-align: center;
+
+    }
+
+    #testCardTable {
+      margin-left:auto;
+      margin-right:auto;
+    }
