@@ -21,12 +21,12 @@
     </head>
     <body>
         <div class="container">
-            <h3 class="text-left">Example NMI Gateway Payment Form</h3>
-            <h4>Utilizing Collect.js Hosted Tokenization </h4>
-            <hr>
+
             <div class = "container">    
                 <form id="payForm" action="https://secure.nmi.com/api/transact.php" method="post" class = "theForm" target = "ifrm1">
-                    <h1 class="text-center">Student Payment Portal</h1><hr>
+                    <h1 class="text-center">Student Payment Portal</h1>
+                    <h4 class="text-info text-center">Utilizing Collect.js Hosted Tokenization </h4>
+                    <hr>
                     <div class="formInner">
                         <input type="hidden" id="username" name="username" value="demo">
                         <input type="hidden" id="password" name="password" value="password">
@@ -84,8 +84,9 @@
                                     <option value="" selected disabled hidden>Choose here</option>
                                 </select>
                             </p>
-                            <button class="customPayButton" type="button" id="payButton">Pay the money</button>
-                            <small>*See console for test cards</small>
+                            <br>
+                            <button class="customPayButton text-center" type="button" id="payButton">Pay the money</button>
+                            <br><small>*See console for test cards</small>
                         </div>
                     </div>
                     <div>

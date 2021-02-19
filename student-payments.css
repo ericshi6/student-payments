@@ -1,9 +1,10 @@
 body {
-    background-color: #f1f1f1;
+    background-color: #d3d3d3;
   }
 #payForm {
     background-color: #ffffff;
     margin: auto;
+    margin-top: 40px;
     padding: 40px;
     width: 70%;
     min-width: 300px;
@@ -14,6 +15,7 @@ body {
   }
 .tab.active {
     display: inline;
+    height: 500px;
 }
   button {
     background-color: #1AD18E;
@@ -94,4 +96,8 @@ body {
     #testCardTable {
       margin-left:auto;
       margin-right:auto;
+    }
+
+    .customPayButton {
+      position: relative;
     }
