@@ -21,18 +21,19 @@ for(var i = 0; i < options.length; i++) {
     dropdown.appendChild(el);
 };
 
-var currentTab = 0; // Current tab is set to be the first tab (0)
-var maxTab = 2;
+//var currentTab = 0; // Current tab is set to be the first tab (0)
+//var maxTab = 2;
 $(document).ready(function(){
-    stepIndicator(currentTab);
-    $('#prevBtn').hide();
+    //stepIndicator(currentTab);
+    //$('#prevBtn').hide();
     
     $('#toggleTable').click(function(){
       $('#testCardTable').toggle();
     });
 
+
     //showTab(currentTab); // Display the current tab
-    $('#nextBtn').on('click', ()=>{
+/*     $('#nextBtn').on('click', ()=>{
         if (currentTab < maxTab) {
             currentTab++;
             $('#prevBtn').show();
@@ -61,7 +62,7 @@ $(document).ready(function(){
         $('.step').removeClass('active');
         $('.step'+n).addClass('active');
         
-    }
+    } */
 
   });
 

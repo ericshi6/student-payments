@@ -1,22 +1,14 @@
 body {
-    background-color: #d3d3d3;
+    background-color: #eeeeee;
   }
 #payForm {
     background-color: #ffffff;
     margin: auto;
     margin-top: 40px;
     padding: 40px;
-    width: 70%;
-    min-width: 300px;
+    width: 100%;
 }
-/* Hide all steps by default: */
-.tab {
-    display: none;
-  }
-.tab.active {
-    display: inline;
-    height: 500px;
-}
+
   button {
     background-color: #1AD18E;
     color: #ffffff;
@@ -27,33 +19,9 @@ body {
   button:hover {
     opacity: 0.8;
   }
-  #prevBtn {
-    background-color: #bbbbbb;
-    
-  }
-  /* Make circles that indicate the steps of the form: */
-.prevNext {
-  padding: 10px;
 
-}
-.steps {
-  padding: 10px;
-  text-align: center;
-}
 
-.step {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbbbbb;
-    border: none;  
-    border-radius: 50%;
-    display: inline-block;
-    opacity: 0.5;
-  }
-  .step.active {
-    opacity: 1;
-  }
+
   
     #payButton:hover {
         background-color: #19C687;
@@ -69,8 +37,8 @@ body {
         margin: 20px auto;
     }
     .form-control {
-        border: 3px solid #ffffff !important;
-        box-shadow: 0 2px 8px #dddddd !important;
+        border: 1px solid #ffffff;
+        box-shadow: 0 2px 1px #dddddd !important;
         font-family: 'Arial';
         width: 100%;
     }
