@@ -30,6 +30,8 @@
                         <input type="hidden" id="password" name="password" value="password">
 
                         <!-- Visible Form-->
+                        <h3> Amount Due:</h3>
+                            <input size="30" type="text" name="amount" value="55.99" class="form-control form-amount"/>
                         <h3>Name:</h3>
                             <p>
                                 First Name: 
@@ -71,10 +73,7 @@
                             </p>
                       
 
-                            <p>
-                                Amount:
-                                <input size="30" type="text" name="amount" value="55.99" class="form-control"/>
-                            </p>
+                            
                             <p>
                                 What would you like to pay for? 
                                 <select name="merchant_defined_field_2" id = "dropdown" class="form-control">
@@ -82,7 +81,7 @@
                                 </select>
                             </p>
                             <br>
-                            <button class="customPayButton text-center" type="button" id="payButton">Pay the money</button>
+                            <button class="customPayButton btn-large text-center" type="button" id="payButton">Pay the money</button>
                             <br><small>*See console for test cards</small>
                        
                     </div>

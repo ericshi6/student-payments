@@ -15,9 +15,15 @@ body {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    font-size: large;
+    border-radius: 4px;
+    transition: ease;
+
   }
   button:hover {
     opacity: 0.8;
+    border: 1px solid yellow;
+
   }
 
 
@@ -35,6 +41,9 @@ body {
         flex-wrap: wrap;
         justify-content: space-between;
         margin: 20px auto;
+    }
+    .form-amount {
+      font-size: large;
     }
     .form-control {
         border: 1px solid #ffffff;
@@ -68,4 +77,5 @@ body {
 
     .customPayButton {
       position: relative;
+      
     }
