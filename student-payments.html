@@ -1,15 +1,16 @@
+
 <html>
     <head>
         <title>Student Payment Portal</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script
         src="https://secure.nmi.com/token/Collect.js"
         data-tokenization-key="5mN8N7-jhr55W-N22pxX-uAW2s9"
-        data-payment-selector=".customPayButton"
+        data-payment-selector=".cardbutton"
         data-theme="bootstrap"
         data-primary-color="#ff288d"
         data-secondary-color="#00ffb3"
@@ -17,22 +18,37 @@
         data-payment-type="cc"
         data-instruction-text="Enter Card Information"
     ></script>
+    <script
+        src="https://secure.nmi.com/token/Collect.js"
+        data-tokenization-key="5mN8N7-jhr55W-N22pxX-uAW2s9"
+        data-payment-selector=".checkbutton"
+        data-theme="bootstrap"
+        data-primary-color="#ff288d"
+        data-secondary-color="#00ffb3"
+        data-button-text="SUBMIT ME!"
+        data-payment-type="ck"
+        data-instruction-text="Enter Check Information"
+    ></script>
     <link id="css" rel="stylesheet" type="text/css" href="student-payments.css" />
     </head>
+ 
     <body>
-        <div class="container">
-            <h3 class="text-left">Example NMI Gateway Payment Form</h3>
-            <h4>Utilizing Collect.js Hosted Tokenization </h4>
-            <hr>
+
             <div class = "container">    
                 <form id="payForm" action="https://secure.nmi.com/api/transact.php" method="post" class = "theForm" target = "ifrm1">
-                    <h1 class="text-center">Student Payment Portal</h1><hr>
-                    <div class="formInner">
+                    <img class="logo" src="https://rb.gy/wisk3j">
+
+                    <h1 class="text-center">Student Payment Portal</h1>
+                    <h4 class="text-info text-center">Utilizing Collect.js Hosted Tokenization </h4>
+                    <hr>
+                    <div>
                         <input type="hidden" id="username" name="username" value="demo">
                         <input type="hidden" id="password" name="password" value="password">
 
                         <!-- Visible Form-->
-                        <div class="tab tab0 active"><h3>Name:</h3><hr>
+                        <h3> Amount Due:</h3>
+                            <input size="30" type="text" name="amount" value="55.99" class="form-control form-amount"/>
+                        <h3>Name:</h3>
                             <p>
                                 First Name: 
                                 <input size="30" type="text" name="fname" value="Chi Chi" class="form-control"/>
@@ -45,8 +61,8 @@
                                 Student ID:
                                 <input size="30" type="text" name="merchant_defined_field_1" value="student_1" class="form-control">
                             </p>
-                        </div>
-                        <div class="tab tab1"><h3>Billing Info:</h3><hr>
+                        
+                        <h3>Billing Info:</h3>
                             <p>
                                 Address: 
                                 <input size="30" type="text" name="address" value="123 Main Street" class="form-control">
@@ -71,35 +87,26 @@
                                 Phone: 
                                 <input size="30" type="text" name="phone" value="5555555555" class="form-control">
                             </p>
-                        </div>
+                      
 
-                        <div class="tab tab2"><h3>Payment: </h3><hr>
-                            <p>
-                                Amount:
-                                <input size="30" type="text" name="amount" value="55.99" class="form-control"/>
-                            </p>
+                            
                             <p>
                                 What would you like to pay for? 
                                 <select name="merchant_defined_field_2" id = "dropdown" class="form-control">
                                     <option value="" selected disabled hidden>Choose here</option>
                                 </select>
                             </p>
-                            <button class="customPayButton" type="button" id="payButton">Pay the money</button>
-                            <small>*See console for test cards</small>
-                        </div>
+                            <br>
+                            <button class="cardbutton payButton btn-large text-center" type="button" id="cardbutton">CARD</button>
+                            <button class="checkbutton payButton btn-large text-center" type="button" id="checkbutton">CHECK</button>
+
+                            <br><small>*See console for test cards</small>
+                            <img src="https://s3-us-west-2.amazonaws.com/userdata123/www/imagefields/64956/64956231.png?_=1592513079790" style="height:5%; display: block; margin-left: auto;">
+
+                       
                     </div>
-                    <div>
-                        <div class="prevNext text-right">
-                          <button type="button" id="prevBtn">Previous</button>
-                          <button type="button" id="nextBtn">Next</button>
-                        </div>
-                      </div>
-                      <!-- Circles which indicates the steps of the form: -->
-                      <div class = "steps">
-                        <span class="step step0"></span>
-                        <span class="step step1"></span>
-                        <span class="step step2"></span>
-                      </div>
+     
+                     
                     
                 </form>
                 <div id="paymentResponse" type="hidden" style = "display: block; margin: 20px auto;">
@@ -157,7 +164,6 @@
                 </tbody>
                 </table>
             </div>
-        </div>
     </body>
     <script src="student-payments.js"></script>
 <script type="text/javascript">
