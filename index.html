@@ -9,7 +9,7 @@
     <script
         src="https://secure.nmi.com/token/Collect.js"
         data-tokenization-key="5mN8N7-jhr55W-N22pxX-uAW2s9"
-        data-payment-selector=".customPayButton"
+        data-payment-selector=".cardbutton"
         data-theme="bootstrap"
         data-primary-color="#ff288d"
         data-secondary-color="#00ffb3"
@@ -17,8 +17,20 @@
         data-payment-type="cc"
         data-instruction-text="Enter Card Information"
     ></script>
+    <script
+        src="https://secure.nmi.com/token/Collect.js"
+        data-tokenization-key="5mN8N7-jhr55W-N22pxX-uAW2s9"
+        data-payment-selector=".checkbutton"
+        data-theme="bootstrap"
+        data-primary-color="#ff288d"
+        data-secondary-color="#00ffb3"
+        data-button-text="SUBMIT ME!"
+        data-payment-type="ck"
+        data-instruction-text="Enter Check Information"
+    ></script>
     <link id="css" rel="stylesheet" type="text/css" href="student-payments.css" />
     </head>
+ 
     <body>
 
             <div class = "container">    
@@ -84,7 +96,9 @@
                                 </select>
                             </p>
                             <br>
-                            <button class="customPayButton btn-large text-center" type="button" id="payButton">Pay the money</button>
+                            <button class="cardbutton payButton btn-large text-center" type="button" id="cardbutton">CARD</button>
+                            <button class="checkbutton payButton btn-large text-center" type="button" id="checkbutton">CHECK</button>
+
                             <br><small>*See console for test cards</small>
                             <img src="https://s3-us-west-2.amazonaws.com/userdata123/www/imagefields/64956/64956231.png?_=1592513079790" style="height:5%; display: block; margin-left: auto;">
 
@@ -200,7 +214,6 @@
                                <!--input type="hidden" id="security_key" name="security_key" value="no key"-->
                         <input type="hidden" id="username" name="username" value="demo">
                         <input type="hidden" id="password" name="password" value="password">
-
                         <!--Level 2 Data-->
                         <input type="hidden" id="tax" name="tax" value="1.00">
                         <input type="hidden" id="shipping" name="shipping" value="1.00">
